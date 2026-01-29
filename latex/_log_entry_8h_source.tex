@@ -1,0 +1,59 @@
+\doxysection{Log\+Entry.\+h}
+\hypertarget{_log_entry_8h_source}{}\label{_log_entry_8h_source}\index{include/LogEntry.h@{include/LogEntry.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOGENTRY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOGENTRY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum\ class}\ LogLevel}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Info,\ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ Warning,\ }
+\DoxyCodeLine{00016\ \ \ \ \ Error,\ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ Debug\ \ \ \ }
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_log_entry_aa104bb6698501c21c7accffa72983165}{LogEntry}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_log_entry_a71bcd756287438a5a1d041ff7f008485}{timestamp}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ LogLevel\ \mbox{\hyperlink{struct_log_entry_a3da4cc198fd911dd664a30f95760c755}{level}};\ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ QString\ \mbox{\hyperlink{struct_log_entry_a63b77a903c8673978ab42b9c0e7bd781}{message}};\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98}{camera\_id}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_log_entry_aa104bb6698501c21c7accffa72983165}{LogEntry}}(\ LogLevel\ lvl\ =\ LogLevel::Info,\ QString\ \ msg\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{int}\ camId\ =\ -\/1\ )\ :}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_log_entry_a71bcd756287438a5a1d041ff7f008485}{timestamp}}(\ QDateTime::currentDateTime()\ ),\ \mbox{\hyperlink{struct_log_entry_a3da4cc198fd911dd664a30f95760c755}{level}}(\ lvl\ ),\ \mbox{\hyperlink{struct_log_entry_a63b77a903c8673978ab42b9c0e7bd781}{message}}(std::move(\ msg\ )),\ \mbox{\hyperlink{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98}{camera\_id}}(\ camId\ )}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ QString\ \mbox{\hyperlink{struct_log_entry_a3b9ca0b9111f08b0b0baba41bf011993}{levelToString}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\ \mbox{\hyperlink{struct_log_entry_a3da4cc198fd911dd664a30f95760c755}{level}}\ )}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::Info:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}INFO"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::Warning:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WARNING"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::Error:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ERROR"{}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::Debug:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}DEBUG"{}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ QString\ \mbox{\hyperlink{struct_log_entry_a37c8ae2a27f4540b572011ca5e6fcf87}{toString}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ QString\ camStr\ =\ (\ \mbox{\hyperlink{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98}{camera\_id}}\ >=\ 0\ )\ ?\ QString(\ \textcolor{stringliteral}{"{}[Cam\ \%1]\ "{}}\ ).arg(\ \mbox{\hyperlink{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98}{camera\_id}}\ )\ :\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ QString(\ \textcolor{stringliteral}{"{}[\%1]\ \%2\%3:\ \%4"{}}\ )}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ .arg(\mbox{\hyperlink{struct_log_entry_a71bcd756287438a5a1d041ff7f008485}{timestamp}}.toString(\ \textcolor{stringliteral}{"{}yyyy-\/MM-\/dd\ hh:mm:ss"{}}\ ),\ \mbox{\hyperlink{struct_log_entry_a3b9ca0b9111f08b0b0baba41bf011993}{levelToString}}(),\ camStr,\ \mbox{\hyperlink{struct_log_entry_a63b77a903c8673978ab42b9c0e7bd781}{message}});}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LOGENTRY\_H}}
+
+\end{DoxyCode}

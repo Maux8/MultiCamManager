@@ -1,0 +1,46 @@
+\doxysection{Log\+Entry Struct Reference}
+\hypertarget{struct_log_entry}{}\label{struct_log_entry}\index{LogEntry@{LogEntry}}
+
+
+Represents a single log entry with timestamp and level.  
+
+
+
+
+{\ttfamily \#include $<$Log\+Entry.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_log_entry_aa104bb6698501c21c7accffa72983165}\label{struct_log_entry_aa104bb6698501c21c7accffa72983165} 
+{\bfseries Log\+Entry} (Log\+Level lvl=Log\+Level\+::\+Info, QString msg="{}"{}, int cam\+Id=-\/1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{struct_log_entry_a3b9ca0b9111f08b0b0baba41bf011993}\label{struct_log_entry_a3b9ca0b9111f08b0b0baba41bf011993} 
+QString {\bfseries level\+To\+String} () const
+\begin{DoxyCompactList}\small\item\em Convert log level to string. \end{DoxyCompactList}\item 
+\Hypertarget{struct_log_entry_a37c8ae2a27f4540b572011ca5e6fcf87}\label{struct_log_entry_a37c8ae2a27f4540b572011ca5e6fcf87} 
+QString {\bfseries to\+String} () const
+\begin{DoxyCompactList}\small\item\em Format the log entry as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_log_entry_a71bcd756287438a5a1d041ff7f008485}\label{struct_log_entry_a71bcd756287438a5a1d041ff7f008485} 
+QDate\+Time {\bfseries timestamp}
+\begin{DoxyCompactList}\small\item\em When the log was created. \end{DoxyCompactList}\item 
+\Hypertarget{struct_log_entry_a3da4cc198fd911dd664a30f95760c755}\label{struct_log_entry_a3da4cc198fd911dd664a30f95760c755} 
+Log\+Level {\bfseries level}
+\begin{DoxyCompactList}\small\item\em Severity level. \end{DoxyCompactList}\item 
+\Hypertarget{struct_log_entry_a63b77a903c8673978ab42b9c0e7bd781}\label{struct_log_entry_a63b77a903c8673978ab42b9c0e7bd781} 
+QString {\bfseries message}
+\begin{DoxyCompactList}\small\item\em Log message content. \end{DoxyCompactList}\item 
+\Hypertarget{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98}\label{struct_log_entry_ae205b3d1b36c125aa24ad1d2a2c48d98} 
+int {\bfseries camera\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Associated camera ID (-\/1 for system-\/wide logs). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single log entry with timestamp and level. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Log\+Entry.\+h\end{DoxyCompactItemize}

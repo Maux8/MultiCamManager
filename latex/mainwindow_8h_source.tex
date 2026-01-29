@@ -1,0 +1,158 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{presentation/mainwindow.h@{presentation/mainwindow.h}}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QGridLayout>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}CamerasManager.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QListWidget>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }QResizeEvent;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ onNewFrame();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{struct\ }CameraTile\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ QWidget*\ container\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ QLabel*\ titleLabel\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ QLabel*\ imageLabel\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ rebuildCameraGrid();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ ensureCameraTile(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ removeCameraTile(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ updateCameraTitle(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ setupLogFile();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ updateFrame();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ onRecordTriggered();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ onSettingsTriggered();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ onCamerasTriggered();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ onFPSTriggered();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ onTemperaturTriggered();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ onFilesClicked();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ onAddCameraButtonClicked();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ onRemoveCameraButtonClicked();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ onRefreshTrackedCamerasButtonClicked();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ onTrackedCameraItemChanged(QListWidgetItem*\ item);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ panelTargetWidth(\textcolor{keywordtype}{double}\ factor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ savePersistentCameras();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ loadPersistentSettings();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ setupFpsGraph();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ setupTemperatureGraph();}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGraphs();}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ refresh();}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ rebuildCameraSidePanel();}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ ensureSeriesAlignedToTime(\textcolor{keyword}{const}\ QVector<int>\&\ cameraIds);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00223\ \ \ \ \ QColor\ colorForCamera(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{void}\ onIncreaseGraphWindowTriggered();}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{void}\ onDecreaseGraphWindowTriggered();}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{resizeEvent}}(QResizeEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00253\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \mbox{\hyperlink{class_cameras_manager}{CamerasManager}}\ *m\_cameraManager;}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_camerasPanelOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_camerasPanelWidthFactor\ =\ 0.20;\ \ \ \textcolor{comment}{//\ 20\%\ der\ Fensterbreite}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_graphPanelOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_graphPanelWidthFactor\ =\ 0.25;\ \ \ \ \ \textcolor{comment}{//\ 25\%}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_settings\_sidepanelOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_settingsPanelWidthFactor\ =\ 0.30;\ \ \textcolor{comment}{//\ 30\%}}
+\DoxyCodeLine{00265\ \ \ \ \ QString\ m\_last\_Output\_dir;}
+\DoxyCodeLine{00266\ \ \ \ \ QString\ m\_logDirectory;}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ QMap<int,\ QString>\ m\_cameraDisplayNames;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isRecording\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00271\ \ \ \ \ QComboBox\ *m\_videoFormatComboBox\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{//\ Graph\ Data}}
+\DoxyCodeLine{00274\ \ \ \ \ QVector<double>\ m\_time\_data;\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{comment}{//\ Per-\/camera\ y-\/data\ (same\ time\ vector\ is\ used\ for\ all)}}
+\DoxyCodeLine{00277\ \ \ \ \ QMap<int,\ QVector<double>>\ m\_fps\_data;\ }
+\DoxyCodeLine{00278\ \ \ \ \ QMap<int,\ QVector<double>>\ m\_temperature\_data;\ }
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_start\_time;\ }
+\DoxyCodeLine{00281\ \ \ \ \ QTimer*\ m\_graph\_update\_timer;\ }
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ Sliding\ window\ (shared\ for\ FPS\ and\ Temperature)}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_plot\_window\_seconds\ =\ 30.0;\ }
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{comment}{//\ Stable\ per-\/camera\ color\ mapping\ (same\ color\ in\ FPS\ and\ Temperature\ plot)}}
+\DoxyCodeLine{00287\ \ \ \ \ QMap<int,\ QColor>\ m\_camera\_plot\_colors;\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_plot\_window\_step\_seconds\ =\ 5.0;\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_plot\_window\_min\_seconds\ \ =\ 2.0;\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_plot\_window\_max\_seconds\ \ =\ 120.0;\ }
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_history\_seconds\ =\ 600.0;\ \textcolor{comment}{//\ keep\ last\ 10\ minutes\ in\ memory}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ QMap<int,\ CameraTile>\ m\_cameraTiles;}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_cameraGridColumns\ =\ 2;}
+\DoxyCodeLine{00298\ \};}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

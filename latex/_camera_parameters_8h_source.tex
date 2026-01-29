@@ -1,0 +1,29 @@
+\doxysection{Camera\+Parameters.\+h}
+\hypertarget{_camera_parameters_8h_source}{}\label{_camera_parameters_8h_source}\index{include/CameraParameters.h@{include/CameraParameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAMERAPARAMETERS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAMERAPARAMETERS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_camera_parameters_adf73697f1136028ab13ecf8a0b878f22}{CameraParameters}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_camera_parameters_a90a4f153e9013d894a568b139b6c42e9}{temperature}};\ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_camera_parameters_a58acc0e0a43df3dcc2e630a7ae4d3ab7}{fps}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_camera_parameters_a46ca8c3108f9cc747e75cb798f3ebe86}{exposureTime}};\ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_camera_parameters_aa4697712c916615e8674ca98454521f0}{gain}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_camera_parameters_a0d804060d8418e61486f4906e465775c}{power\_status}};\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{struct_camera_parameters_a0aff6aa9085ac2db010432813164b4b5}{frame\_counter}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_camera_parameters_a2bec882b552e381d97bd7084eac96b84}{error\_code}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_camera_parameters_adf73697f1136028ab13ecf8a0b878f22}{CameraParameters}}()\ :}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_camera_parameters_a90a4f153e9013d894a568b139b6c42e9}{temperature}}(\ 0.0\ ),\ \mbox{\hyperlink{struct_camera_parameters_a58acc0e0a43df3dcc2e630a7ae4d3ab7}{fps}}(\ 0.0\ ),\ \mbox{\hyperlink{struct_camera_parameters_a46ca8c3108f9cc747e75cb798f3ebe86}{exposureTime}}(\ 0.0\ ),\ \mbox{\hyperlink{struct_camera_parameters_aa4697712c916615e8674ca98454521f0}{gain}}(\ 0.0\ ),\ \mbox{\hyperlink{struct_camera_parameters_a0d804060d8418e61486f4906e465775c}{power\_status}}(\ false\ ),\ \mbox{\hyperlink{struct_camera_parameters_a0aff6aa9085ac2db010432813164b4b5}{frame\_counter}}(\ 0\ ),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_camera_parameters_a2bec882b552e381d97bd7084eac96b84}{error\_code}}(\ 0\ )}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CAMERAPARAMETERS\_H}}
+
+\end{DoxyCode}

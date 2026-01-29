@@ -1,0 +1,245 @@
+\doxysection{Camera\+Simulator\+Lib Class Reference}
+\hypertarget{class_camera_simulator_lib}{}\label{class_camera_simulator_lib}\index{CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_simulator_lib_a6d1b4478dc4aabdfc1984ca77b82cd28}\label{class_camera_simulator_lib_a6d1b4478dc4aabdfc1984ca77b82cd28} 
+{\bfseries Camera\+Simulator\+Lib} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor\+: Erstellt den Simulator intern. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_simulator_lib_a4ae84c4789c45b7bd70b335513d629b1}\label{class_camera_simulator_lib_a4ae84c4789c45b7bd70b335513d629b1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Camera\+Simulator\+Lib} ()
+\begin{DoxyCompactList}\small\item\em Destruktor\+: Gibt die Ressourcen frei. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_simulator_lib_a3f3a93d16750369063230ecd7ac2aed0}{connect}} ()
+\begin{DoxyCompactList}\small\item\em Verbindet die Kamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_simulator_lib_ad63d46fb6f95d3072a7da2ee28ad50c4}\label{class_camera_simulator_lib_ad63d46fb6f95d3072a7da2ee28ad50c4} 
+void {\bfseries disconnect} ()
+\begin{DoxyCompactList}\small\item\em Trennt die Kamera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_simulator_lib_a44cbebf715ad083d28b8acddd1e2793e}{start}} ()
+\begin{DoxyCompactList}\small\item\em Startet die Bildaufnahme. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_simulator_lib_acead6704973e4f5da454deca79e13e8e}\label{class_camera_simulator_lib_acead6704973e4f5da454deca79e13e8e} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Stoppt die Bildaufnahme. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_camera_simulator_lib_a217ee6aa204172381816aded5b154bf3}{get\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Liefert den aktuellen Frame. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_camera_simulator_lib_a879e17016ab5c41dd502d6d8a4c566fe}{get\+Temperature}} () const
+\begin{DoxyCompactList}\small\item\em Liefert die Temperatur. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_camera_simulator_lib_af125f50ec1d7d375489194d7ecd1ea5f}{get\+FPS}} () const
+\begin{DoxyCompactList}\small\item\em Liefert die aktuelle Bildfrequenz. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_camera_simulator_lib_a519d201c822603e522efa23db55e74c5}{get\+Exposure\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Liest die Belichtungszeit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_simulator_lib_a260a67eebcaa99bba5eecf7f9c0dbf1f}{set\+Exposure\+Time}} (double value)
+\begin{DoxyCompactList}\small\item\em Setzt die Belichtungszeit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_camera_simulator_lib_a96b16f811df659c811877423a1115734}{get\+Gain}} () const
+\begin{DoxyCompactList}\small\item\em Liefert den Gain-\/\+Wert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_simulator_lib_aec597938165f1e200f4d69413e9d6310}{set\+Gain}} (double value)
+\begin{DoxyCompactList}\small\item\em Setzt den Gain-\/\+Wert. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_simulator_lib_a0c5c77a879f5b80bc3b5e7179a910bdf}{get\+Power\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Prüft Stromversorgung. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_simulator_lib_af5a2653aa5b25e84bafdc28d7199e130}{set\+Power\+Status}} (bool on)
+\begin{DoxyCompactList}\small\item\em Setzt Stromversorgung. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_camera_simulator_lib_a9c0ceba9955b416b20324946fee535a6}{get\+Frame\+Counter}} () const
+\begin{DoxyCompactList}\small\item\em Liefert die Zahl der Frames. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_camera_simulator_lib_a0d11c8bf1fa3eef5c47034c79d4f8b4e}{get\+Error\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Liefert den Fehlercode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_simulator_lib_a879a67954a487fb4d953d6b8ccf2ff5c}{set\+Error\+Code}} (int code)
+\begin{DoxyCompactList}\small\item\em Setzt den Fehlercode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_camera_simulator_lib_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_simulator_lib_a3f3a93d16750369063230ecd7ac2aed0}\index{CameraSimulatorLib@{CameraSimulatorLib}!connect@{connect}}
+\index{connect@{connect}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a3f3a93d16750369063230ecd7ac2aed0} 
+bool Camera\+Simulator\+Lib\+::connect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verbindet die Kamera. 
+
+\begin{DoxyReturn}{Returns}
+true wenn Verbindung erfolgreich war. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a0d11c8bf1fa3eef5c47034c79d4f8b4e}\index{CameraSimulatorLib@{CameraSimulatorLib}!getErrorCode@{getErrorCode}}
+\index{getErrorCode@{getErrorCode}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getErrorCode()}{getErrorCode()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a0d11c8bf1fa3eef5c47034c79d4f8b4e} 
+int Camera\+Simulator\+Lib\+::get\+Error\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liefert den Fehlercode. 
+
+\begin{DoxyReturn}{Returns}
+Fehlercode. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a519d201c822603e522efa23db55e74c5}\index{CameraSimulatorLib@{CameraSimulatorLib}!getExposureTime@{getExposureTime}}
+\index{getExposureTime@{getExposureTime}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getExposureTime()}{getExposureTime()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a519d201c822603e522efa23db55e74c5} 
+double Camera\+Simulator\+Lib\+::get\+Exposure\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liest die Belichtungszeit. 
+
+\begin{DoxyReturn}{Returns}
+Belichtungszeit in µs. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_af125f50ec1d7d375489194d7ecd1ea5f}\index{CameraSimulatorLib@{CameraSimulatorLib}!getFPS@{getFPS}}
+\index{getFPS@{getFPS}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getFPS()}{getFPS()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_af125f50ec1d7d375489194d7ecd1ea5f} 
+double Camera\+Simulator\+Lib\+::get\+FPS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liefert die aktuelle Bildfrequenz. 
+
+\begin{DoxyReturn}{Returns}
+FPS. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a217ee6aa204172381816aded5b154bf3}\index{CameraSimulatorLib@{CameraSimulatorLib}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a217ee6aa204172381816aded5b154bf3} 
+cv\+::\+Mat Camera\+Simulator\+Lib\+::get\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Liefert den aktuellen Frame. 
+
+\begin{DoxyReturn}{Returns}
+Open\+CV Bild (cv\+::\+Mat). 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a9c0ceba9955b416b20324946fee535a6}\index{CameraSimulatorLib@{CameraSimulatorLib}!getFrameCounter@{getFrameCounter}}
+\index{getFrameCounter@{getFrameCounter}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getFrameCounter()}{getFrameCounter()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a9c0ceba9955b416b20324946fee535a6} 
+uint64\+\_\+t Camera\+Simulator\+Lib\+::get\+Frame\+Counter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liefert die Zahl der Frames. 
+
+\begin{DoxyReturn}{Returns}
+Frame-\/\+Zähler. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a96b16f811df659c811877423a1115734}\index{CameraSimulatorLib@{CameraSimulatorLib}!getGain@{getGain}}
+\index{getGain@{getGain}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getGain()}{getGain()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a96b16f811df659c811877423a1115734} 
+double Camera\+Simulator\+Lib\+::get\+Gain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liefert den Gain-\/\+Wert. 
+
+\begin{DoxyReturn}{Returns}
+Verstärkungsfaktor. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a0c5c77a879f5b80bc3b5e7179a910bdf}\index{CameraSimulatorLib@{CameraSimulatorLib}!getPowerStatus@{getPowerStatus}}
+\index{getPowerStatus@{getPowerStatus}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getPowerStatus()}{getPowerStatus()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a0c5c77a879f5b80bc3b5e7179a910bdf} 
+bool Camera\+Simulator\+Lib\+::get\+Power\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Prüft Stromversorgung. 
+
+\begin{DoxyReturn}{Returns}
+true wenn Strom an. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a879e17016ab5c41dd502d6d8a4c566fe}\index{CameraSimulatorLib@{CameraSimulatorLib}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a879e17016ab5c41dd502d6d8a4c566fe} 
+double Camera\+Simulator\+Lib\+::get\+Temperature (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Liefert die Temperatur. 
+
+\begin{DoxyReturn}{Returns}
+Temperatur in °C. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_simulator_lib_a879a67954a487fb4d953d6b8ccf2ff5c}\index{CameraSimulatorLib@{CameraSimulatorLib}!setErrorCode@{setErrorCode}}
+\index{setErrorCode@{setErrorCode}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{setErrorCode()}{setErrorCode()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a879a67954a487fb4d953d6b8ccf2ff5c} 
+void Camera\+Simulator\+Lib\+::set\+Error\+Code (\begin{DoxyParamCaption}\item[{int}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Setzt den Fehlercode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Neuer Fehlercode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_simulator_lib_a260a67eebcaa99bba5eecf7f9c0dbf1f}\index{CameraSimulatorLib@{CameraSimulatorLib}!setExposureTime@{setExposureTime}}
+\index{setExposureTime@{setExposureTime}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{setExposureTime()}{setExposureTime()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a260a67eebcaa99bba5eecf7f9c0dbf1f} 
+void Camera\+Simulator\+Lib\+::set\+Exposure\+Time (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Setzt die Belichtungszeit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Neue Belichtungszeit in µs. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_simulator_lib_aec597938165f1e200f4d69413e9d6310}\index{CameraSimulatorLib@{CameraSimulatorLib}!setGain@{setGain}}
+\index{setGain@{setGain}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{setGain()}{setGain()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_aec597938165f1e200f4d69413e9d6310} 
+void Camera\+Simulator\+Lib\+::set\+Gain (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Setzt den Gain-\/\+Wert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Neuer Verstärkungsfaktor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_simulator_lib_af5a2653aa5b25e84bafdc28d7199e130}\index{CameraSimulatorLib@{CameraSimulatorLib}!setPowerStatus@{setPowerStatus}}
+\index{setPowerStatus@{setPowerStatus}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{setPowerStatus()}{setPowerStatus()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_af5a2653aa5b25e84bafdc28d7199e130} 
+void Camera\+Simulator\+Lib\+::set\+Power\+Status (\begin{DoxyParamCaption}\item[{bool}]{on}{}\end{DoxyParamCaption})}
+
+
+
+Setzt Stromversorgung. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on} & true schaltet an, false aus. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_simulator_lib_a44cbebf715ad083d28b8acddd1e2793e}\index{CameraSimulatorLib@{CameraSimulatorLib}!start@{start}}
+\index{start@{start}!CameraSimulatorLib@{CameraSimulatorLib}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_camera_simulator_lib_a44cbebf715ad083d28b8acddd1e2793e} 
+bool Camera\+Simulator\+Lib\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Startet die Bildaufnahme. 
+
+\begin{DoxyReturn}{Returns}
+true wenn gestartet wurde. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+extern/\+Camera\+Simulator/Camera\+Simulator\+Lib.\+h\end{DoxyCompactItemize}

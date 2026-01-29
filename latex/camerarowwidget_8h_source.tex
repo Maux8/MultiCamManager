@@ -1,0 +1,38 @@
+\doxysection{camerarowwidget.\+h}
+\hypertarget{camerarowwidget_8h_source}{}\label{camerarowwidget_8h_source}\index{presentation/camerarowwidget.h@{presentation/camerarowwidget.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QToolButton>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }CameraRowWidget\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Status\ \{\ Ok,\ Warning\ \};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Recording\ \{Recording,\ NotRecording\};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Visibility\ \{\ Visible,\ Hidden\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ CameraRowWidget(QString\ name,\ QWidget*\ parent=\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ setRecordingState(Recording\ currentStatus);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ setStatus(Status\ currentStatus);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ setVisibility(Visibility\ currentVisibility);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ signals:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ visibilityToggled(\textcolor{keywordtype}{bool}\ visible);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ QLabel*\ m\_iconCam\{\};}
+\DoxyCodeLine{00025\ \ \ \ \ QLabel*\ m\_name\{\};}
+\DoxyCodeLine{00026\ \ \ \ \ QLabel*\ m\_isRecording\{\};}
+\DoxyCodeLine{00027\ \ \ \ \ QLabel*\ m\_status\{\};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_visible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_iconSize\ =\ 18;}
+\DoxyCodeLine{00031\ \ \ \ \ ;}
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

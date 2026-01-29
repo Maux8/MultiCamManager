@@ -1,0 +1,55 @@
+\doxysection{videosaver.\+h}
+\hypertarget{videosaver_8h_source}{}\label{videosaver_8h_source}\index{application/videosaver.h@{application/videosaver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VIDEOSAVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VIDEOSAVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum\ class}\ VideoFormat}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ AVI,}
+\DoxyCodeLine{00011\ \ \ \ \ MP4}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_video_saver_ad567fae667231c3f5571825d99afa744}{VideoSaver}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_video_saver_ad567fae667231c3f5571825d99afa744}{VideoSaver}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_video_saver_ab09f8faabea44b2e54f40eb70be26121}{\string~VideoSaver}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_saver_a1aeda605b806c1de36fde4d2399ca3d6}{configureCameras}}(\textcolor{keyword}{const}\ QList<int>\ \&cameraIds);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_saver_a2ff39ccc3f791da51dcf57fc98770ecb}{startRecording}}(\textcolor{keyword}{const}\ QString\ \&outputDir,\ \textcolor{keywordtype}{double}\ fps,\ VideoFormat\ format\ =\ VideoFormat::AVI);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_saver_a422e75de43bd25ac8c1b32c34b83fdd2}{stopRecording}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_saver_a0bd92418f9bee381acce26255edb3144}{onNewFrame}}(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keyword}{const}\ cv::Mat\ \&frame);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_video_saver_a5064ccdd703008fcf9605cdca0d451c4}{isRecording}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_isRecording;\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{struct\ }CameraStream}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cameraId;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ cv::VideoWriter\ writer;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ writerInitialized\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ cv::Size\ frameSize;}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::map<int,\ CameraStream>\ m\_streams;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isRecording\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00061\ \ \ \ \ QString\ m\_outputDir;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_fps\ =\ 33.0;}
+\DoxyCodeLine{00063\ \ \ \ \ VideoFormat\ m\_format\ =\ VideoFormat::AVI;}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VIDEOSAVER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,96 @@
+\doxysection{Video\+Saver Class Reference}
+\hypertarget{class_video_saver}{}\label{class_video_saver}\index{VideoSaver@{VideoSaver}}
+Inheritance diagram for Video\+Saver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_video_saver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_video_saver_ad567fae667231c3f5571825d99afa744}{Video\+Saver}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_video_saver_ab09f8faabea44b2e54f40eb70be26121}\label{class_video_saver_ab09f8faabea44b2e54f40eb70be26121} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Video\+Saver} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_video_saver_a1aeda605b806c1de36fde4d2399ca3d6}\label{class_video_saver_a1aeda605b806c1de36fde4d2399ca3d6} 
+void {\bfseries configure\+Cameras} (const QList$<$ int $>$ \&camera\+Ids)
+\begin{DoxyCompactList}\small\item\em Cam\+Manager clarifies cam -\/ Id relations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_video_saver_a2ff39ccc3f791da51dcf57fc98770ecb}{start\+Recording}} (const QString \&output\+Dir, double fps, Video\+Format format=Video\+Format\+::\+AVI)
+\begin{DoxyCompactList}\small\item\em starts all recordings and opens one file per cam \end{DoxyCompactList}\item 
+\Hypertarget{class_video_saver_a422e75de43bd25ac8c1b32c34b83fdd2}\label{class_video_saver_a422e75de43bd25ac8c1b32c34b83fdd2} 
+void {\bfseries stop\+Recording} ()
+\begin{DoxyCompactList}\small\item\em stops all recordings and closes files \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_video_saver_a0bd92418f9bee381acce26255edb3144}{on\+New\+Frame}} (int camera\+Id, const cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em takes new frame from Cam\+Manager and writes it into Video\+Writer \end{DoxyCompactList}\item 
+\Hypertarget{class_video_saver_a5064ccdd703008fcf9605cdca0d451c4}\label{class_video_saver_a5064ccdd703008fcf9605cdca0d451c4} 
+bool {\bfseries is\+Recording} () const
+\begin{DoxyCompactList}\small\item\em true if recording \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_video_saver_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_video_saver_ad567fae667231c3f5571825d99afa744}\index{VideoSaver@{VideoSaver}!VideoSaver@{VideoSaver}}
+\index{VideoSaver@{VideoSaver}!VideoSaver@{VideoSaver}}
+\doxysubsubsection{\texorpdfstring{VideoSaver()}{VideoSaver()}}
+{\footnotesize\ttfamily \label{class_video_saver_ad567fae667231c3f5571825d99afa744} 
+Video\+Saver\+::\+Video\+Saver (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent QObject \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_video_saver_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_video_saver_a0bd92418f9bee381acce26255edb3144}\index{VideoSaver@{VideoSaver}!onNewFrame@{onNewFrame}}
+\index{onNewFrame@{onNewFrame}!VideoSaver@{VideoSaver}}
+\doxysubsubsection{\texorpdfstring{onNewFrame()}{onNewFrame()}}
+{\footnotesize\ttfamily \label{class_video_saver_a0bd92418f9bee381acce26255edb3144} 
+void Video\+Saver\+::on\+New\+Frame (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{const cv\+::\+Mat \&}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+takes new frame from Cam\+Manager and writes it into Video\+Writer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & id of Cam the current frame came from \\
+\hline
+{\em current} & frame \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_video_saver_a2ff39ccc3f791da51dcf57fc98770ecb}\index{VideoSaver@{VideoSaver}!startRecording@{startRecording}}
+\index{startRecording@{startRecording}!VideoSaver@{VideoSaver}}
+\doxysubsubsection{\texorpdfstring{startRecording()}{startRecording()}}
+{\footnotesize\ttfamily \label{class_video_saver_a2ff39ccc3f791da51dcf57fc98770ecb} 
+void Video\+Saver\+::start\+Recording (\begin{DoxyParamCaption}\item[{const QString \&}]{output\+Dir}{, }\item[{double}]{fps}{, }\item[{Video\+Format}]{format}{ = {\ttfamily VideoFormat\+:\+:AVI}}\end{DoxyParamCaption})}
+
+
+
+starts all recordings and opens one file per cam 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Dir} & dir to save the files to \\
+\hline
+{\em fps} & for recordings \\
+\hline
+{\em format} & video format (AVI or MP4) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+application/videosaver.\+h\item 
+application/videosaver.\+cpp\end{DoxyCompactItemize}

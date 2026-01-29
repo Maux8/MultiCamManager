@@ -1,0 +1,65 @@
+\doxysection{Camera\+Simulator\+Lib.\+h}
+\hypertarget{_camera_simulator_lib_8h_source}{}\label{_camera_simulator_lib_8h_source}\index{extern/CameraSimulator/CameraSimulatorLib.h@{extern/CameraSimulator/CameraSimulatorLib.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\ \ \#ifdef\ CAMERASIMULATORLIB\_EXPORTS}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\ \ \ \ \#define\ CAMERASIMULATORLIB\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\ \ \ \ \#define\ CAMERASIMULATORLIB\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \ \#define\ CAMERASIMULATORLIB\_API}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\#include\ "{}CameraSimulator.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \ }
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{class\ }CameraSimulator;}
+\DoxyCodeLine{00024\ \ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }CAMERASIMULATORLIB\_API\ \mbox{\hyperlink{class_camera_simulator_lib_a6d1b4478dc4aabdfc1984ca77b82cd28}{CameraSimulatorLib}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_camera_simulator_lib_a6d1b4478dc4aabdfc1984ca77b82cd28}{CameraSimulatorLib}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_camera_simulator_lib_a4ae84c4789c45b7bd70b335513d629b1}{\string~CameraSimulatorLib}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_camera_simulator_lib_a3f3a93d16750369063230ecd7ac2aed0}{connect}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_ad63d46fb6f95d3072a7da2ee28ad50c4}{disconnect}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_camera_simulator_lib_a44cbebf715ad083d28b8acddd1e2793e}{start}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_acead6704973e4f5da454deca79e13e8e}{stop}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_camera_simulator_lib_a217ee6aa204172381816aded5b154bf3}{getFrame}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_camera_simulator_lib_a879e17016ab5c41dd502d6d8a4c566fe}{getTemperature}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_camera_simulator_lib_af125f50ec1d7d375489194d7ecd1ea5f}{getFPS}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_camera_simulator_lib_a519d201c822603e522efa23db55e74c5}{getExposureTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_a260a67eebcaa99bba5eecf7f9c0dbf1f}{setExposureTime}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_camera_simulator_lib_a96b16f811df659c811877423a1115734}{getGain}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_aec597938165f1e200f4d69413e9d6310}{setGain}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_camera_simulator_lib_a0c5c77a879f5b80bc3b5e7179a910bdf}{getPowerStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_af5a2653aa5b25e84bafdc28d7199e130}{setPowerStatus}}(\textcolor{keywordtype}{bool}\ on);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_camera_simulator_lib_a9c0ceba9955b416b20324946fee535a6}{getFrameCounter}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_camera_simulator_lib_a0d11c8bf1fa3eef5c47034c79d4f8b4e}{getErrorCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_simulator_lib_a879a67954a487fb4d953d6b8ccf2ff5c}{setErrorCode}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00133\ \ \ \ \ CameraSimulator*\ m\_simulator;\ }
+\DoxyCodeLine{00134\ \};}
+
+\end{DoxyCode}

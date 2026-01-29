@@ -1,0 +1,149 @@
+\doxysection{ui\+\_\+mainwindow.\+h}
+\hypertarget{ui__mainwindow_8h_source}{}\label{ui__mainwindow_8h_source}\index{build/Desktop\_Qt\_6\_9\_3\_MSVC2022\_64bit-\/Debug/MultiCamManager\_autogen/include/ui\_mainwindow.h@{build/Desktop\_Qt\_6\_9\_3\_MSVC2022\_64bit-\/Debug/MultiCamManager\_autogen/include/ui\_mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'mainwindow.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.9.3}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtGui/QAction>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QColumnView>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHBoxLayout>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QListView>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMainWindow>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMenu>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMenuBar>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QtWidgets/QStatusBar>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ QWidget\ *centralwidget;}
+\DoxyCodeLine{00032\ \ \ \ \ QWidget\ *layoutWidget;}
+\DoxyCodeLine{00033\ \ \ \ \ QVBoxLayout\ *verticalLayout\_2;}
+\DoxyCodeLine{00034\ \ \ \ \ QHBoxLayout\ *horizontalLayout\_4;}
+\DoxyCodeLine{00035\ \ \ \ \ QListView\ *listView;}
+\DoxyCodeLine{00036\ \ \ \ \ QLabel\ *cameraViewLabel;}
+\DoxyCodeLine{00037\ \ \ \ \ QColumnView\ *columnView;}
+\DoxyCodeLine{00038\ \ \ \ \ QMenuBar\ *menubar;}
+\DoxyCodeLine{00039\ \ \ \ \ QMenu\ *menuSettings;}
+\DoxyCodeLine{00040\ \ \ \ \ QMenu\ *menuRecord;}
+\DoxyCodeLine{00041\ \ \ \ \ QMenu\ *menuStop;}
+\DoxyCodeLine{00042\ \ \ \ \ QMenu\ *menuFPS;}
+\DoxyCodeLine{00043\ \ \ \ \ QMenu\ *menuTemperature;}
+\DoxyCodeLine{00044\ \ \ \ \ QMenu\ *menuCameras;}
+\DoxyCodeLine{00045\ \ \ \ \ QMenu\ *menuRefresh;}
+\DoxyCodeLine{00046\ \ \ \ \ QMenu\ *menuFiles;}
+\DoxyCodeLine{00047\ \ \ \ \ QStatusBar\ *statusbar;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_main_window}{MainWindow}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setObjectName(\textcolor{stringliteral}{"{}MainWindow"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>resize(800,\ 513);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ centralwidget\ =\ \textcolor{keyword}{new}\ QWidget(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ centralwidget-\/>setObjectName(\textcolor{stringliteral}{"{}centralwidget"{}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ layoutWidget\ =\ \textcolor{keyword}{new}\ QWidget(centralwidget);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ layoutWidget-\/>setObjectName(\textcolor{stringliteral}{"{}layoutWidget"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ layoutWidget-\/>setGeometry(QRect(0,\ 0,\ 801,\ 561));}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ verticalLayout\_2\ =\ \textcolor{keyword}{new}\ QVBoxLayout(layoutWidget);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>setObjectName(\textcolor{stringliteral}{"{}verticalLayout\_2"{}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>setContentsMargins(0,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ horizontalLayout\_4\ =\ \textcolor{keyword}{new}\ QHBoxLayout();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ horizontalLayout\_4-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout\_4"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ listView\ =\ \textcolor{keyword}{new}\ QListView(layoutWidget);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ listView-\/>setObjectName(\textcolor{stringliteral}{"{}listView"{}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ horizontalLayout\_4-\/>addWidget(listView);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ cameraViewLabel\ =\ \textcolor{keyword}{new}\ QLabel(layoutWidget);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ cameraViewLabel-\/>setObjectName(\textcolor{stringliteral}{"{}cameraViewLabel"{}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ horizontalLayout\_4-\/>addWidget(cameraViewLabel);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ columnView\ =\ \textcolor{keyword}{new}\ QColumnView(layoutWidget);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ columnView-\/>setObjectName(\textcolor{stringliteral}{"{}columnView"{}});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ horizontalLayout\_4-\/>addWidget(columnView);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ verticalLayout\_2-\/>addLayout(horizontalLayout\_4);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setCentralWidget(centralwidget);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ menubar\ =\ \textcolor{keyword}{new}\ QMenuBar(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ menubar-\/>setObjectName(\textcolor{stringliteral}{"{}menubar"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ menubar-\/>setGeometry(QRect(0,\ 0,\ 800,\ 17));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ menuSettings\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ menuSettings-\/>setObjectName(\textcolor{stringliteral}{"{}menuSettings"{}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ menuRecord\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ menuRecord-\/>setObjectName(\textcolor{stringliteral}{"{}menuRecord"{}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ menuStop\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ menuStop-\/>setObjectName(\textcolor{stringliteral}{"{}menuStop"{}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ menuFPS\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ menuFPS-\/>setObjectName(\textcolor{stringliteral}{"{}menuFPS"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ menuTemperature\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ menuTemperature-\/>setObjectName(\textcolor{stringliteral}{"{}menuTemperature"{}});}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ menuCameras\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ menuCameras-\/>setObjectName(\textcolor{stringliteral}{"{}menuCameras"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ menuRefresh\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ menuRefresh-\/>setObjectName(\textcolor{stringliteral}{"{}menuRefresh"{}});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ menuFiles\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ menuFiles-\/>setObjectName(\textcolor{stringliteral}{"{}menuFiles"{}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setMenuBar(menubar);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ statusbar\ =\ \textcolor{keyword}{new}\ QStatusBar(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ statusbar-\/>setObjectName(\textcolor{stringliteral}{"{}statusbar"{}});}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setStatusBar(statusbar);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuSettings-\/>menuAction());}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuRefresh-\/>menuAction());}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuRecord-\/>menuAction());}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuStop-\/>menuAction());}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuCameras-\/>menuAction());}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuFPS-\/>menuAction());}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuTemperature-\/>menuAction());}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuFiles-\/>menuAction());}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00119\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ cameraViewLabel-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}TextLabel"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ menuSettings-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Settings"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ menuRecord-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Record"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ menuStop-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Stop"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ menuFPS-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}FPS"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ menuTemperature-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Temperature"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ menuCameras-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Cameras"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ menuRefresh-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Refresh"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ menuFiles-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Files"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00133\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}\ \{\};}
+\DoxyCodeLine{00139\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_MAINWINDOW\_H}}
+
+\end{DoxyCode}

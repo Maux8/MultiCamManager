@@ -1,0 +1,450 @@
+\doxysection{Cameras\+Manager Class Reference}
+\hypertarget{class_cameras_manager}{}\label{class_cameras_manager}\index{CamerasManager@{CamerasManager}}
+
+
+Central manager for multiple cameras.  
+
+
+
+
+{\ttfamily \#include $<$Cameras\+Manager.\+h$>$}
+
+Inheritance diagram for Cameras\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cameras_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cameras_manager_aef7bf3928162a5241e165077ec8dffff}{camera\+Added}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Emitted when a camera is added. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a0eba43cedf3751ea192d566d0680b8ca}{camera\+Removed}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Emitted when a camera is removed. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_ad526931db9cf017cd9e1b4f789310d92}\label{class_cameras_manager_ad526931db9cf017cd9e1b4f789310d92} 
+void {\bfseries frames\+Updated} ()
+\begin{DoxyCompactList}\small\item\em Emitted when frames are updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a6642077dfea08d51522d67d652214a6d}{log\+Added}} (const \mbox{\hyperlink{struct_log_entry}{Log\+Entry}} \&entry)
+\begin{DoxyCompactList}\small\item\em Emitted when a new log entry is added. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a863b37ac56cd6bbb1eedd59154bbc8be}{parameters\+Updated}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Emitted when camera parameters are updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cameras_manager_a7aa873a2b67a7930c2927d7b24d5c904}{Cameras\+Manager}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_a583767b2f0a89bf64086a7fef10c889f}\label{class_cameras_manager_a583767b2f0a89bf64086a7fef10c889f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Cameras\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cameras_manager_a4323d0f80856ad90277d096508bb05e9}{add\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Add a new camera to the manager. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cameras_manager_a4410bfb10657219f8e96a86db7b5235a}{remove\+Camera}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Remove a camera by ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cameras_manager_a961f90a76c49c7df7074cdbe6f6570f8}{get\+Camera\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of cameras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_cameras_manager_a7f38f90b6759762d4f49beff549477e7}{get\+Camera}} (int camera\+Id) const
+\begin{DoxyCompactList}\small\item\em Get a camera by ID. \end{DoxyCompactList}\item 
+QVector$<$ int $>$ \mbox{\hyperlink{class_cameras_manager_ac5a0e53818d7d8f2b808a868dd20e7cc}{get\+Camera\+Ids}} () const
+\begin{DoxyCompactList}\small\item\em Get all camera IDs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cameras_manager_a4ad3f264c16b276737597cb2c63b0b1d}{connect\+All}} ()
+\begin{DoxyCompactList}\small\item\em Connect all cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_aca7067f501586bcf90af5e5eda9177c2}\label{class_cameras_manager_aca7067f501586bcf90af5e5eda9177c2} 
+void {\bfseries disconnect\+All} ()
+\begin{DoxyCompactList}\small\item\em Disconnect all cameras. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cameras_manager_ae715220af8fc0b07e9be37a380337a3c}{start\+All}} ()
+\begin{DoxyCompactList}\small\item\em Start acquisition on all cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_ab18ab1af63054064cdf66a0e5c76d5f3}\label{class_cameras_manager_ab18ab1af63054064cdf66a0e5c76d5f3} 
+void {\bfseries stop\+All} ()
+\begin{DoxyCompactList}\small\item\em Stop acquisition on all cameras. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_cameras_manager_a61bdcd4239bc9ac95cd993b5e15da237}{get\+Frame}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Get the latest frame from a specific camera. \end{DoxyCompactList}\item 
+QMap$<$ int, cv\+::\+Mat $>$ \mbox{\hyperlink{class_cameras_manager_a7168b8fe9b58e11ad79692e23b56188d}{get\+All\+Frames}} ()
+\begin{DoxyCompactList}\small\item\em Get frames from all cameras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_parameters}{Camera\+Parameters}} \mbox{\hyperlink{class_cameras_manager_a83a09ab80f5f5522eaf9306173894a72}{get\+Camera\+Parameters}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Get parameters for a specific camera. \end{DoxyCompactList}\item 
+const QVector$<$ \mbox{\hyperlink{struct_log_entry}{Log\+Entry}} $>$ \& \mbox{\hyperlink{class_cameras_manager_a71ad955764cfcf11e9119ad5d4ed07b4}{get\+Log\+History}} () const
+\begin{DoxyCompactList}\small\item\em Get the log history. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_a37d6306b8ceaf5b6e98692f8a29795c7}\label{class_cameras_manager_a37d6306b8ceaf5b6e98692f8a29795c7} 
+void {\bfseries clear\+Logs} ()
+\begin{DoxyCompactList}\small\item\em Clear the log history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_ab5c50595929f16909a9cc595a517ece8}{set\+Log\+Directory}} (const QString \&directory)
+\begin{DoxyCompactList}\small\item\em Configure the directory where log file will be stored. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_abb4ee71ad358e6c7eb4c76e72387680c}{start\+Parameter\+Logging}} (const QString \&directory, int interval\+Ms=500)
+\begin{DoxyCompactList}\small\item\em Start recording camera parameters to CSV files. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_a6f43dd8fbafae00386046d951e9cdc2c}\label{class_cameras_manager_a6f43dd8fbafae00386046d951e9cdc2c} 
+void {\bfseries stop\+Parameter\+Logging} ()
+\begin{DoxyCompactList}\small\item\em Stop recording camera parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a560baeece9795b425b9753bc2763fabc}{set\+Exposure\+Time}} (int camera\+Id, double value)
+\begin{DoxyCompactList}\small\item\em Set exposure time for a specific camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a3abbbe8775b62336613f9b3deca8a902}{set\+Gain}} (int camera\+Id, double value)
+\begin{DoxyCompactList}\small\item\em Set gain for a specific camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_a638a6c825da51f083b288a9d1d278ed9}{set\+Power\+Status}} (int camera\+Id, bool on)
+\begin{DoxyCompactList}\small\item\em Set power status for a specific camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cameras_manager_acfb4ed925b50e4a1b238cd7ab8ad71bb}{set\+Auto\+Update}} (bool enabled, int interval\+Ms=33)
+\begin{DoxyCompactList}\small\item\em Enable/disable automatic frame updates. \end{DoxyCompactList}\item 
+\Hypertarget{class_cameras_manager_ad993c620beef30620afff63588374ef8}\label{class_cameras_manager_ad993c620beef30620afff63588374ef8} 
+void {\bfseries start\+Recording} (QString directory, Video\+Format format=Video\+Format\+::\+AVI)
+\item 
+\Hypertarget{class_cameras_manager_a9523bca8e974f8bac62c7323d03271a1}\label{class_cameras_manager_a9523bca8e974f8bac62c7323d03271a1} 
+void {\bfseries stop\+Recording} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Central manager for multiple cameras. 
+
+This class manages multiple camera instances, handles their lifecycle, coordinates frame acquisition, and provides centralized logging. 
+
+\label{doc-constructors}
+\Hypertarget{class_cameras_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cameras_manager_a7aa873a2b67a7930c2927d7b24d5c904}\index{CamerasManager@{CamerasManager}!CamerasManager@{CamerasManager}}
+\index{CamerasManager@{CamerasManager}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{CamerasManager()}{CamerasManager()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a7aa873a2b67a7930c2927d7b24d5c904} 
+Cameras\+Manager\+::\+Cameras\+Manager (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent QObject \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_cameras_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cameras_manager_a4323d0f80856ad90277d096508bb05e9}\index{CamerasManager@{CamerasManager}!addCamera@{addCamera}}
+\index{addCamera@{addCamera}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{addCamera()}{addCamera()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a4323d0f80856ad90277d096508bb05e9} 
+int Cameras\+Manager\+::add\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add a new camera to the manager. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the newly added camera 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_aef7bf3928162a5241e165077ec8dffff}\index{CamerasManager@{CamerasManager}!cameraAdded@{cameraAdded}}
+\index{cameraAdded@{cameraAdded}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{cameraAdded}{cameraAdded}}
+{\footnotesize\ttfamily \label{class_cameras_manager_aef7bf3928162a5241e165077ec8dffff} 
+void Cameras\+Manager\+::camera\+Added (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when a camera is added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of the added camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a0eba43cedf3751ea192d566d0680b8ca}\index{CamerasManager@{CamerasManager}!cameraRemoved@{cameraRemoved}}
+\index{cameraRemoved@{cameraRemoved}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{cameraRemoved}{cameraRemoved}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a0eba43cedf3751ea192d566d0680b8ca} 
+void Cameras\+Manager\+::camera\+Removed (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when a camera is removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of the removed camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a4ad3f264c16b276737597cb2c63b0b1d}\index{CamerasManager@{CamerasManager}!connectAll@{connectAll}}
+\index{connectAll@{connectAll}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{connectAll()}{connectAll()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a4ad3f264c16b276737597cb2c63b0b1d} 
+bool Cameras\+Manager\+::connect\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Connect all cameras. 
+
+\begin{DoxyReturn}{Returns}
+true if all cameras connected successfully 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a7168b8fe9b58e11ad79692e23b56188d}\index{CamerasManager@{CamerasManager}!getAllFrames@{getAllFrames}}
+\index{getAllFrames@{getAllFrames}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getAllFrames()}{getAllFrames()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a7168b8fe9b58e11ad79692e23b56188d} 
+QMap$<$ int, cv\+::\+Mat $>$ Cameras\+Manager\+::get\+All\+Frames (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get frames from all cameras. 
+
+\begin{DoxyReturn}{Returns}
+Map of camera ID to frame 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a7f38f90b6759762d4f49beff549477e7}\index{CamerasManager@{CamerasManager}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a7f38f90b6759762d4f49beff549477e7} 
+\mbox{\hyperlink{class_camera}{Camera}} \texorpdfstring{$\ast$}{*} Cameras\+Manager\+::get\+Camera (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a camera by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_camera}{Camera} object or nullptr if not found 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a961f90a76c49c7df7074cdbe6f6570f8}\index{CamerasManager@{CamerasManager}!getCameraCount@{getCameraCount}}
+\index{getCameraCount@{getCameraCount}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getCameraCount()}{getCameraCount()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a961f90a76c49c7df7074cdbe6f6570f8} 
+int Cameras\+Manager\+::get\+Camera\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of cameras. 
+
+\begin{DoxyReturn}{Returns}
+Number of cameras managed 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_ac5a0e53818d7d8f2b808a868dd20e7cc}\index{CamerasManager@{CamerasManager}!getCameraIds@{getCameraIds}}
+\index{getCameraIds@{getCameraIds}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getCameraIds()}{getCameraIds()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_ac5a0e53818d7d8f2b808a868dd20e7cc} 
+QVector$<$ int $>$ Cameras\+Manager\+::get\+Camera\+Ids (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get all camera IDs. 
+
+\begin{DoxyReturn}{Returns}
+List of all camera IDs 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a83a09ab80f5f5522eaf9306173894a72}\index{CamerasManager@{CamerasManager}!getCameraParameters@{getCameraParameters}}
+\index{getCameraParameters@{getCameraParameters}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getCameraParameters()}{getCameraParameters()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a83a09ab80f5f5522eaf9306173894a72} 
+\mbox{\hyperlink{struct_camera_parameters}{Camera\+Parameters}} Cameras\+Manager\+::get\+Camera\+Parameters (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Get parameters for a specific camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_camera_parameters}{Camera\+Parameters} struct 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a61bdcd4239bc9ac95cd993b5e15da237}\index{CamerasManager@{CamerasManager}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a61bdcd4239bc9ac95cd993b5e15da237} 
+cv\+::\+Mat Cameras\+Manager\+::get\+Frame (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Get the latest frame from a specific camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Open\+CV Mat with the frame 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a71ad955764cfcf11e9119ad5d4ed07b4}\index{CamerasManager@{CamerasManager}!getLogHistory@{getLogHistory}}
+\index{getLogHistory@{getLogHistory}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{getLogHistory()}{getLogHistory()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a71ad955764cfcf11e9119ad5d4ed07b4} 
+const QVector$<$ \mbox{\hyperlink{struct_log_entry}{Log\+Entry}} $>$ \& Cameras\+Manager\+::get\+Log\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the log history. 
+
+\begin{DoxyReturn}{Returns}
+Vector of all log entries 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_a6642077dfea08d51522d67d652214a6d}\index{CamerasManager@{CamerasManager}!logAdded@{logAdded}}
+\index{logAdded@{logAdded}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{logAdded}{logAdded}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a6642077dfea08d51522d67d652214a6d} 
+void Cameras\+Manager\+::log\+Added (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_log_entry}{Log\+Entry}} \&}]{entry}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when a new log entry is added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The log entry \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a863b37ac56cd6bbb1eedd59154bbc8be}\index{CamerasManager@{CamerasManager}!parametersUpdated@{parametersUpdated}}
+\index{parametersUpdated@{parametersUpdated}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{parametersUpdated}{parametersUpdated}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a863b37ac56cd6bbb1eedd59154bbc8be} 
+void Cameras\+Manager\+::parameters\+Updated (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when camera parameters are updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of the camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a4410bfb10657219f8e96a86db7b5235a}\index{CamerasManager@{CamerasManager}!removeCamera@{removeCamera}}
+\index{removeCamera@{removeCamera}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{removeCamera()}{removeCamera()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a4410bfb10657219f8e96a86db7b5235a} 
+bool Cameras\+Manager\+::remove\+Camera (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Remove a camera by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of the camera to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_acfb4ed925b50e4a1b238cd7ab8ad71bb}\index{CamerasManager@{CamerasManager}!setAutoUpdate@{setAutoUpdate}}
+\index{setAutoUpdate@{setAutoUpdate}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{setAutoUpdate()}{setAutoUpdate()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_acfb4ed925b50e4a1b238cd7ab8ad71bb} 
+void Cameras\+Manager\+::set\+Auto\+Update (\begin{DoxyParamCaption}\item[{bool}]{enabled}{, }\item[{int}]{interval\+Ms}{ = {\ttfamily 33}}\end{DoxyParamCaption})}
+
+
+
+Enable/disable automatic frame updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & true to enable \\
+\hline
+{\em interval\+Ms} & Update interval in milliseconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a560baeece9795b425b9753bc2763fabc}\index{CamerasManager@{CamerasManager}!setExposureTime@{setExposureTime}}
+\index{setExposureTime@{setExposureTime}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{setExposureTime()}{setExposureTime()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a560baeece9795b425b9753bc2763fabc} 
+void Cameras\+Manager\+::set\+Exposure\+Time (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set exposure time for a specific camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+{\em value} & Exposure time in µs \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a3abbbe8775b62336613f9b3deca8a902}\index{CamerasManager@{CamerasManager}!setGain@{setGain}}
+\index{setGain@{setGain}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{setGain()}{setGain()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a3abbbe8775b62336613f9b3deca8a902} 
+void Cameras\+Manager\+::set\+Gain (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set gain for a specific camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+{\em value} & Gain factor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_ab5c50595929f16909a9cc595a517ece8}\index{CamerasManager@{CamerasManager}!setLogDirectory@{setLogDirectory}}
+\index{setLogDirectory@{setLogDirectory}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{setLogDirectory()}{setLogDirectory()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_ab5c50595929f16909a9cc595a517ece8} 
+void Cameras\+Manager\+::set\+Log\+Directory (\begin{DoxyParamCaption}\item[{const QString \&}]{directory}{}\end{DoxyParamCaption})}
+
+
+
+Configure the directory where log file will be stored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Absolute path to the chosen directory \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_a638a6c825da51f083b288a9d1d278ed9}\index{CamerasManager@{CamerasManager}!setPowerStatus@{setPowerStatus}}
+\index{setPowerStatus@{setPowerStatus}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{setPowerStatus()}{setPowerStatus()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_a638a6c825da51f083b288a9d1d278ed9} 
+void Cameras\+Manager\+::set\+Power\+Status (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{bool}]{on}{}\end{DoxyParamCaption})}
+
+
+
+Set power status for a specific camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & \doxylink{class_camera}{Camera} ID \\
+\hline
+{\em on} & true to power on \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cameras_manager_ae715220af8fc0b07e9be37a380337a3c}\index{CamerasManager@{CamerasManager}!startAll@{startAll}}
+\index{startAll@{startAll}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{startAll()}{startAll()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_ae715220af8fc0b07e9be37a380337a3c} 
+bool Cameras\+Manager\+::start\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Start acquisition on all cameras. 
+
+\begin{DoxyReturn}{Returns}
+true if all cameras started successfully 
+\end{DoxyReturn}
+\Hypertarget{class_cameras_manager_abb4ee71ad358e6c7eb4c76e72387680c}\index{CamerasManager@{CamerasManager}!startParameterLogging@{startParameterLogging}}
+\index{startParameterLogging@{startParameterLogging}!CamerasManager@{CamerasManager}}
+\doxysubsubsection{\texorpdfstring{startParameterLogging()}{startParameterLogging()}}
+{\footnotesize\ttfamily \label{class_cameras_manager_abb4ee71ad358e6c7eb4c76e72387680c} 
+void Cameras\+Manager\+::start\+Parameter\+Logging (\begin{DoxyParamCaption}\item[{const QString \&}]{directory}{, }\item[{int}]{interval\+Ms}{ = {\ttfamily 500}}\end{DoxyParamCaption})}
+
+
+
+Start recording camera parameters to CSV files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Directory where CSV files will be stored \\
+\hline
+{\em interval\+Ms} & Interval in milliseconds between writes (default 500ms) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+application/Cameras\+Manager.\+h\item 
+application/Cameras\+Manager.\+cpp\end{DoxyCompactItemize}

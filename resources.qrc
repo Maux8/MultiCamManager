@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/power_off.png</file>
+        <file>img/power_on.png</file>
+        <file>img/video_off.png</file>
+        <file>img/video_on.png</file>
+        <file>img/hide.png</file>
+        <file>img/visible.png</file>
+    </qresource>
+</RCC>

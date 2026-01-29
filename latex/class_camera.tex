@@ -1,0 +1,285 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+Wrapper for \doxylink{class_camera_simulator_lib}{Camera\+Simulator\+Lib}, represents a single camera.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_af4cd4e317a3b670636147acb1712ce21}{frame\+Ready}} (int camera\+Id)
+\begin{DoxyCompactList}\small\item\em Emitted when a new frame is available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ac0dbc4386293de1774de0b27c4fbe6ab}{error\+Occurred}} (int camera\+Id, int error\+Code, const QString \&message)
+\begin{DoxyCompactList}\small\item\em Emitted when an error occurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a2a628b39f876bcc85468c86df62bf060}{connection\+Status\+Changed}} (int camera\+Id, bool connected)
+\begin{DoxyCompactList}\small\item\em Emitted when connection status changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_a517cb3f7f151b31c6e977cf7763c6c76}{Camera}} (int id, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ad1897942d0ccf91052386388a497349f}\label{class_camera_ad1897942d0ccf91052386388a497349f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_camera_ad2731f65f680be02d41d3b396d7db1be}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the camera ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_accb01264588c00f47e9d89bc6bd12f11}{connect}} ()
+\begin{DoxyCompactList}\small\item\em Connect to the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a5fcb967a482c463230fb5d86089b2649}\label{class_camera_a5fcb967a482c463230fb5d86089b2649} 
+void {\bfseries disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from the camera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_a0ada0a38ccf73515b68dfa813c629a73}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start frame acquisition. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ae6c6aeaf70ad261f3c188c50e8701b0b}\label{class_camera_ae6c6aeaf70ad261f3c188c50e8701b0b} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Stop frame acquisition. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_a31c9e43f5b97c7fab22d50f7620aa1d4}{is\+Connected}} () const
+\begin{DoxyCompactList}\small\item\em Check if camera is connected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_a6b44143721d2580161b28df7ddd652cc}{is\+Running}} () const
+\begin{DoxyCompactList}\small\item\em Check if camera is running (acquiring frames). \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_camera_af7db9402efb58eff1c63b777f38e7efc}{get\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the current frame from the camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_parameters}{Camera\+Parameters}} \mbox{\hyperlink{class_camera_a3f2619f67962e82c5d8ba4038ea61741}{get\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Update and retrieve current camera parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_acff16ffe2e731ed67a8211cba91cfbc9}{set\+Exposure\+Time}} (double value)
+\begin{DoxyCompactList}\small\item\em Set exposure time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a77abb2e31e609dfb39ffca50623f3225}{set\+Gain}} (double value)
+\begin{DoxyCompactList}\small\item\em Set gain value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aee6347cbe614efc6f9578196e861895b}{set\+Power\+Status}} (bool on)
+\begin{DoxyCompactList}\small\item\em Set power status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper for \doxylink{class_camera_simulator_lib}{Camera\+Simulator\+Lib}, represents a single camera. 
+
+This class manages a single camera instance, handling connection, frame acquisition, and parameter management. 
+
+\label{doc-constructors}
+\Hypertarget{class_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_a517cb3f7f151b31c6e977cf7763c6c76}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily \label{class_camera_a517cb3f7f151b31c6e977cf7763c6c76} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier for this camera \\
+\hline
+{\em parent} & Parent QObject \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_accb01264588c00f47e9d89bc6bd12f11}\index{Camera@{Camera}!connect@{connect}}
+\index{connect@{connect}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily \label{class_camera_accb01264588c00f47e9d89bc6bd12f11} 
+bool Camera\+::connect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Connect to the camera. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a2a628b39f876bcc85468c86df62bf060}\index{Camera@{Camera}!connectionStatusChanged@{connectionStatusChanged}}
+\index{connectionStatusChanged@{connectionStatusChanged}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{connectionStatusChanged}{connectionStatusChanged}}
+{\footnotesize\ttfamily \label{class_camera_a2a628b39f876bcc85468c86df62bf060} 
+void Camera\+::connection\+Status\+Changed (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{bool}]{connected}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when connection status changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of this camera \\
+\hline
+{\em connected} & true if connected \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ac0dbc4386293de1774de0b27c4fbe6ab}\index{Camera@{Camera}!errorOccurred@{errorOccurred}}
+\index{errorOccurred@{errorOccurred}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{errorOccurred}{errorOccurred}}
+{\footnotesize\ttfamily \label{class_camera_ac0dbc4386293de1774de0b27c4fbe6ab} 
+void Camera\+::error\+Occurred (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{, }\item[{int}]{error\+Code}{, }\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when an error occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of this camera \\
+\hline
+{\em error\+Code} & Error code \\
+\hline
+{\em message} & Error message \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_af4cd4e317a3b670636147acb1712ce21}\index{Camera@{Camera}!frameReady@{frameReady}}
+\index{frameReady@{frameReady}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{frameReady}{frameReady}}
+{\footnotesize\ttfamily \label{class_camera_af4cd4e317a3b670636147acb1712ce21} 
+void Camera\+::frame\+Ready (\begin{DoxyParamCaption}\item[{int}]{camera\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when a new frame is available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & ID of this camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_af7db9402efb58eff1c63b777f38e7efc}\index{Camera@{Camera}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily \label{class_camera_af7db9402efb58eff1c63b777f38e7efc} 
+cv\+::\+Mat Camera\+::get\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current frame from the camera. 
+
+\begin{DoxyReturn}{Returns}
+Open\+CV Mat containing the frame 
+\end{DoxyReturn}
+\Hypertarget{class_camera_ad2731f65f680be02d41d3b396d7db1be}\index{Camera@{Camera}!getId@{getId}}
+\index{getId@{getId}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_camera_ad2731f65f680be02d41d3b396d7db1be} 
+int Camera\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the camera ID. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_camera}{Camera} ID 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a3f2619f67962e82c5d8ba4038ea61741}\index{Camera@{Camera}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily \label{class_camera_a3f2619f67962e82c5d8ba4038ea61741} 
+\mbox{\hyperlink{struct_camera_parameters}{Camera\+Parameters}} Camera\+::get\+Parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update and retrieve current camera parameters. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_camera_parameters}{Camera\+Parameters} struct with current values 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a31c9e43f5b97c7fab22d50f7620aa1d4}\index{Camera@{Camera}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily \label{class_camera_a31c9e43f5b97c7fab22d50f7620aa1d4} 
+bool Camera\+::is\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if camera is connected. 
+
+\begin{DoxyReturn}{Returns}
+true if connected 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a6b44143721d2580161b28df7ddd652cc}\index{Camera@{Camera}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily \label{class_camera_a6b44143721d2580161b28df7ddd652cc} 
+bool Camera\+::is\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if camera is running (acquiring frames). 
+
+\begin{DoxyReturn}{Returns}
+true if running 
+\end{DoxyReturn}
+\Hypertarget{class_camera_acff16ffe2e731ed67a8211cba91cfbc9}\index{Camera@{Camera}!setExposureTime@{setExposureTime}}
+\index{setExposureTime@{setExposureTime}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setExposureTime()}{setExposureTime()}}
+{\footnotesize\ttfamily \label{class_camera_acff16ffe2e731ed67a8211cba91cfbc9} 
+void Camera\+::set\+Exposure\+Time (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set exposure time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Exposure time in µs \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a77abb2e31e609dfb39ffca50623f3225}\index{Camera@{Camera}!setGain@{setGain}}
+\index{setGain@{setGain}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setGain()}{setGain()}}
+{\footnotesize\ttfamily \label{class_camera_a77abb2e31e609dfb39ffca50623f3225} 
+void Camera\+::set\+Gain (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set gain value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Gain factor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_aee6347cbe614efc6f9578196e861895b}\index{Camera@{Camera}!setPowerStatus@{setPowerStatus}}
+\index{setPowerStatus@{setPowerStatus}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPowerStatus()}{setPowerStatus()}}
+{\footnotesize\ttfamily \label{class_camera_aee6347cbe614efc6f9578196e861895b} 
+void Camera\+::set\+Power\+Status (\begin{DoxyParamCaption}\item[{bool}]{on}{}\end{DoxyParamCaption})}
+
+
+
+Set power status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on} & true to power on, false to power off \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a0ada0a38ccf73515b68dfa813c629a73}\index{Camera@{Camera}!start@{start}}
+\index{start@{start}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_camera_a0ada0a38ccf73515b68dfa813c629a73} 
+bool Camera\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Start frame acquisition. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+application/Camera.\+h\item 
+application/Camera.\+cpp\end{DoxyCompactItemize}

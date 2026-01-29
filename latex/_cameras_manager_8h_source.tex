@@ -1,0 +1,129 @@
+\doxysection{Cameras\+Manager.\+h}
+\hypertarget{_cameras_manager_8h_source}{}\label{_cameras_manager_8h_source}\index{application/CamerasManager.h@{application/CamerasManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAMERASMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAMERASMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LogEntry.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}videosaver.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cameras_manager_a7aa873a2b67a7930c2927d7b24d5c904}{CamerasManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_cameras_manager_a7aa873a2b67a7930c2927d7b24d5c904}{CamerasManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_cameras_manager_a583767b2f0a89bf64086a7fef10c889f}{\string~CamerasManager}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cameras_manager_a4323d0f80856ad90277d096508bb05e9}{addCamera}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cameras_manager_a4410bfb10657219f8e96a86db7b5235a}{removeCamera}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cameras_manager_a961f90a76c49c7df7074cdbe6f6570f8}{getCameraCount}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_cameras.size();}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\ *\mbox{\hyperlink{class_cameras_manager_a7f38f90b6759762d4f49beff549477e7}{getCamera}}(\textcolor{keywordtype}{int}\ cameraId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ QVector<int>\ \mbox{\hyperlink{class_cameras_manager_ac5a0e53818d7d8f2b808a868dd20e7cc}{getCameraIds}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cameras_manager_a4ad3f264c16b276737597cb2c63b0b1d}{connectAll}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_aca7067f501586bcf90af5e5eda9177c2}{disconnectAll}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cameras_manager_ae715220af8fc0b07e9be37a380337a3c}{startAll}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_ab18ab1af63054064cdf66a0e5c76d5f3}{stopAll}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_cameras_manager_a61bdcd4239bc9ac95cd993b5e15da237}{getFrame}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ QMap<int,\ cv::Mat>\ \mbox{\hyperlink{class_cameras_manager_a7168b8fe9b58e11ad79692e23b56188d}{getAllFrames}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{struct_camera_parameters}{CameraParameters}}\ \mbox{\hyperlink{class_cameras_manager_a83a09ab80f5f5522eaf9306173894a72}{getCameraParameters}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{const}\ QVector<LogEntry>\ \&\mbox{\hyperlink{class_cameras_manager_a71ad955764cfcf11e9119ad5d4ed07b4}{getLogHistory}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00122\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_log\_history;}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a37d6306b8ceaf5b6e98692f8a29795c7}{clearLogs}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_ab5c50595929f16909a9cc595a517ece8}{setLogDirectory}}(\ \textcolor{keyword}{const}\ QString\&\ directory\ );}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_abb4ee71ad358e6c7eb4c76e72387680c}{startParameterLogging}}(\ \textcolor{keyword}{const}\ QString\&\ directory,\ \textcolor{keywordtype}{int}\ intervalMs\ =\ 500\ );}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a6f43dd8fbafae00386046d951e9cdc2c}{stopParameterLogging}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a560baeece9795b425b9753bc2763fabc}{setExposureTime}}(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a3abbbe8775b62336613f9b3deca8a902}{setGain}}(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a638a6c825da51f083b288a9d1d278ed9}{setPowerStatus}}(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keywordtype}{bool}\ on);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_acfb4ed925b50e4a1b238cd7ab8ad71bb}{setAutoUpdate}}(\textcolor{keywordtype}{bool}\ enabled,\ \textcolor{keywordtype}{int}\ intervalMs\ =\ 33);\ \textcolor{comment}{//\ \string~30\ FPS\ default}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ startRecording(QString\ directory,\ VideoFormat\ format\ =\ VideoFormat::AVI);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ stopRecording();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ signals:}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_aef7bf3928162a5241e165077ec8dffff}{cameraAdded}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a0eba43cedf3751ea192d566d0680b8ca}{cameraRemoved}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_ad526931db9cf017cd9e1b4f789310d92}{framesUpdated}}();}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a6642077dfea08d51522d67d652214a6d}{logAdded}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_log_entry}{LogEntry}}\ \&entry);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cameras_manager_a863b37ac56cd6bbb1eedd59154bbc8be}{parametersUpdated}}(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ onCameraError(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keywordtype}{int}\ errorCode,\ \textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnectionStatusChanged(\textcolor{keywordtype}{int}\ cameraId,\ \textcolor{keywordtype}{bool}\ connected);}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ onAutoUpdateTimer();}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{void}\ onParameterLogTimer();}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{void}\ addLog(LogLevel\ level,\ \textcolor{keyword}{const}\ QString\ \&message,\ \textcolor{keywordtype}{int}\ cameraId\ =\ -\/1);}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ writeLogToFile(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_log_entry}{LogEntry}}\&\ entry\ );}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ writeParametersToFile();}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ createParameterLogFile(\textcolor{keywordtype}{int}\ cameraId);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ QMap<int,\ Camera*>\ m\_cameras;\ \ \ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_next\_camera\_id;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_interval\_ms\ =\ 33;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00253\ \ \ \ \ QVector<LogEntry>\ m\_log\_history;\ }
+\DoxyCodeLine{00254\ \ \ \ \ QTimer*\ m\_auto\_update\_timer;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_auto\_update\_enabled;\ \ \ \ \ }
+\DoxyCodeLine{00256\ \ \ \ \ \mbox{\hyperlink{class_video_saver}{VideoSaver}}\ m\_videoSaver;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00257\ \ \ \ \ QFile\ m\_log\_file;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00258\ \ \ \ \ QString\ m\_log\_directory;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00259\ \ \ \ \ QTimer*\ m\_parameter\_log\_timer;\ \ \ \ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_parameter\_logging\_enabled;\ }
+\DoxyCodeLine{00261\ \ \ \ \ QFile*\ m\_param\_file\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00262\ \ \ \ \ QString\ m\_param\_directory;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_param\_log\_interval;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00264\ \};}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CAMERASMANAGER\_H}}
+
+\end{DoxyCode}
